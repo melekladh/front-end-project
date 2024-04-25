@@ -3,7 +3,7 @@ import axios from "axios"
 
 export const createProduct=createAsyncThunk('/product/createproduct',async(data,{rejectWithValue})=>{
     try {
-        const res=await axios.post('http://localhost:9000/api/product/addproduct',data,{
+        const res=await axios.post('https://back-end-project-rlx0.onrender.com/api/product/addproduct',data,{
             headers:{
                 token:localStorage.getItem("token")
             }
@@ -16,7 +16,7 @@ export const createProduct=createAsyncThunk('/product/createproduct',async(data,
 
 export const getProduct=createAsyncThunk('/product/getproduct',async(data,{rejectWithValue})=>{
     try {
-        const res=await axios.get('http://localhost:9000/api/product/getproduct',{
+        const res=await axios.get('https://back-end-project-rlx0.onrender.com/api/product/getproduct',{
             headers:{
                 token:localStorage.getItem('token')
             }

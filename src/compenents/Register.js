@@ -1,3 +1,17 @@
+import React, { useRef } from 'react'
+import { UserRegister } from '../redux/slices/userSlice'
+import { useDispatch, useSelector } from 'react-redux'
+// import "../css/register.css"
+const Register = () => {
+  const email=useRef()
+  const password=useRef()
+const dispatch=useDispatch()
+const {error}=useSelector(state=>state.user)
+  return (
+
+    <div>
+      
+
 <div id="registration-form">
 	<div class='fieldset'>
     <legend>Wanna be Cool?!</legend>
@@ -18,3 +32,12 @@
 		</form>
 	</div>
 </div>
+
+</div>
+
+
+  )
+}
+
+export default Register
+

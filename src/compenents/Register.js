@@ -48,7 +48,8 @@ const {error}=useSelector(state=>state.user)
 		</div>		
 	</div>
 </div> */}
-     <div>
+
+     {/* <div>
      <input type='email' placeholder='type your email' ref={email}></input>
    <input type='password' placeholder='type your password'ref={password}></input>
      <button onClick={()=>dispatch(UserRegister({
@@ -58,7 +59,18 @@ const {error}=useSelector(state=>state.user)
      {error&& <h1>{error}</h1>}
    
 
-   </div>
+   </div> */}
+
+<div className="login-box"><h2>Login</h2><form><div className="user-box">
+        <input type="text" name=""></input>
+            <label>Username</label>
+        </div><div className="user-box">
+            <input type="password" name=""></input>
+            <label>Password</label></div><a href="#"><span></span><span></span><span></span>
+            <span></span>Submit</a></form></div>
+
+
+
     </div>
   )
 }

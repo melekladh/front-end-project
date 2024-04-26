@@ -17,7 +17,7 @@ dispatch(getProduct())
   
   return (
     <div className="product-page" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', 
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', transition: '0.3s'  }} >
+    'box-shadow': '5px  5px 20px 1px #757676'  }} >
           {productData.map(product => (
             
             <Card style={{ width: '18rem' }}>

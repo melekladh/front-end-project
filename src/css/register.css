@@ -1,160 +1,142 @@
-
-  
-  .login-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,.5);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
+#registration-form {
+    font-family:'Open Sans Condensed', sans-serif;
+      width: 400px;
+    min-width:250px;
+      margin: 20px auto;
+      position: relative;
   }
   
-  .login-box h2 {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #fff;
-    text-align: center;
+  #registration-form .fieldset {
+      background-color:#d5d5d5;
+  
+      border-radius: 3px;
+    
   }
   
-  .login-box .user-box {
-    position: relative;
+   #registration-form legend {
+      text-align: center;
+      background: #364351;
+      width: 100%;
+      padding: 30px 0;
+      border-radius: 3px 3px 0 0;
+      color: white;
+  font-size:2em;
   }
   
-  .login-box .user-box input {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
+  .fieldset form{
+    border:1px solid #2f2f2f;
+    margin:0 auto;
+    display:block;
+    width:100%;
+    padding:30px 20px;
+    box-sizing:border-box;
+    border-radius:0 0 3px 3px;
   }
-  .login-box .user-box label {
-    position: absolute;
+  .placeholder #registration-form label {
+      display: none;
+  }
+   .no-placeholder #registration-form label{
+  margin-left:5px;
+    position:relative;
+    display:block;
+    color:grey;
+    text-shadow:0 1px white;
+    font-weight:bold;
+  }
+  /* all */
+  ::-webkit-input-placeholder { text-shadow:1px 1px 1px white; font-weight:bold; }
+  ::-moz-placeholder { text-shadow:0 1px 1px white; font-weight:bold; } /* firefox 19+ */
+  :-ms-input-placeholder { text-shadow:0 1px 1px white; font-weight:bold; } /* ie */
+  #registration-form input[type=text] {
+      padding: 15px 20px;
+      border-radius: 1px;
+    margin:5px auto;
+    background-color:#f7f7f7;
+      border: 1px solid silver;
+  
+      -webkit-box-shadow: inset 0 1px 5px rgba(0,0,0,0.2);
+      box-shadow: inset 0 1px 5px rgba(0,0,0,0.2), 0 1px rgba(255,255,255,.8);
+      width: 100%;
+  
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+    -webkit-transition:background-color .5s ease;
+  -moz-transition:background-color .5s ease;
+  -o-transition:background-color .5s ease;
+  -ms-transition:background-color .5s ease;
+  transition:background-color .5s ease;
+  }
+  .no-placeholder #registration-form input[type=text] {
+      padding: 10px 20px;
+  }
+  
+  #registration-form input[type=text]:active, .placeholder #registration-form input[type=text]:focus {
+      outline: none;
+      border-color: silver;
+    background-color:white;
+  }
+  
+  #registration-form input[type=submit] {
+    font-family:'Open Sans Condensed', sans-serif;
+    text-transform:uppercase;
+    outline:none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      background-color: #5C8CA7;
+      padding: 10px;
+      color: white;
+      border: 1px solid #3498db;
+      border-radius: 3px;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: 5px;
+      cursor: pointer;
+    position:relative;
     top:0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
   }
   
-  .login-box .user-box input:focus ~ label,
-  .login-box .user-box input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: #03e9f4;
-    font-size: 12px;
+  #registration-form input[type=submit]:hover {
+      background-color: #2980b9;
   }
   
-  .login-box form a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #03e9f4;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 40px;
-    letter-spacing: 4px
+  #registration-form input[type=submit]:active {
+  background:#5C8CA7;
   }
   
-  .login-box a:hover {
-    background: #03e9f4;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
-  }
   
-  .login-box a span {
-    position: absolute;
-    display: block;
+  .parsley-error-list{
+  background-color:#C34343;
+  padding: 5px 11px;
+  margin: 0;
+  list-style: none;
+  border-radius: 0 0 3px 3px;
+  margin-top:-5px;
+    margin-bottom:5px;
+    color:white;
+    border:1px solid #870d0d;
+    border-top:none;
+      -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position:relative;
+    top:-1px;
+    text-shadow:0px 1px 1px #460909;
+      font-weight:700;
+    font-size:12px;
   }
-  
-  .login-box a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
-    animation: btn-anim1 1s linear infinite;
+  .parsley-error{
+      border-color:#870d0d!important;
+    border-bottom:none;
   }
-  
-  @keyframes btn-anim1 {
-    0% {
-      left: -100%;
-    }
-    50%,100% {
-      left: 100%;
-    }
+  #registration-form select{
+      width:100%;
+      padding:5px;
   }
-  
-  .login-box a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
-    animation: btn-anim2 1s linear infinite;
-    animation-delay: .25s
+  ::-moz-focus-inner {
+    border: 0;
   }
-  
-  @keyframes btn-anim2 {
-    0% {
-      top: -100%;
-    }
-    50%,100% {
-      top: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
-    animation: btn-anim3 1s linear infinite;
-    animation-delay: .5s
-  }
-  
-  @keyframes btn-anim3 {
-    0% {
-      right: -100%;
-    }
-    50%,100% {
-      right: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
-    animation: btn-anim4 1s linear infinite;
-    animation-delay: .75s
-  }
-  
-  @keyframes btn-anim4 {
-    0% {
-      bottom: -100%;
-    }
-    50%,100% {
-      bottom: 100%;
-    }
-  }
-  

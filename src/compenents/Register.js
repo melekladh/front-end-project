@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { UserRegister } from '../redux/slices/userSlice'
 import { useDispatch, useSelector } from 'react-redux'
 // import "../css/register.css"
+import '../css/product.css'
 const Register = () => {
   const email=useRef()
   const password=useRef()

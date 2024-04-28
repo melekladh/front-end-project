@@ -16,7 +16,6 @@ const {error}=useSelector(state=>state.user)
         password:password.current.value
          }))}>login</button>
       {error&& <h1>{error}</h1>}
-      {/* {!error&& <h1>logged successfully</h1>} */}
 
     </div>
   )

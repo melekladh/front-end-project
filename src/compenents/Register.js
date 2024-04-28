@@ -9,7 +9,7 @@ const dispatch=useDispatch()
 const {error}=useSelector(state=>state.user)
   return (
 
-     <div className='input-form' style={{width:'20%', backgroundColor:'yellow',display:'flex',flexDirection:'column',alignItems:'center',gap:'10px',color:'blue'}}>
+     <div className='input-form' style={{width:'20%',display:'flex',flexDirection:'column',alignItems:'center',gap:'10px',color:'blue'}}>
      <input type='email' placeholder='type your email' ref={email}></input>
    <input type='password' placeholder='type your password'ref={password}></input>
      <button onClick={()=>dispatch(UserRegister({
@@ -17,8 +17,6 @@ const {error}=useSelector(state=>state.user)
        password:password.current.value
         }))}>register</button>
      {error&& <h1>{error}</h1>}
-
-
    </div>
   )
 }

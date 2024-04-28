@@ -44,8 +44,8 @@ const Navigation = () => {
      </button>
         </>:<div style={{display:'flex', justifyContent:'flex-end'}}>
 
-        <Link to='/login'>login</Link>
-         <Link to='/register'>register</Link>
+        <Link to='/login' style={{textDecoration:'none'}}>login</Link>
+         <Link to='/register' style={{textDecoration:'none'}}>register</Link>
              </div>
 
       }

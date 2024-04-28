@@ -1,4 +1,4 @@
-.container{
+/* .container{
   display: flex;
   justify-content: center;
 }
@@ -11,4 +11,35 @@
   align-items:center;
   gap:10px;
   color:'blue'
+} */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.inputs button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.inputs button:hover {
+  background-color: #0056b3;
 }

@@ -20,7 +20,7 @@ const {error}=useSelector(state=>state.user)
      <button onClick={()=>dispatch(UserRegister({
        email:email.current.value,
        password:password.current.value
-        }))}>register</button>
+        }))}>REGISTER</button>
      {error&& <h5>{error}</h5>}
 		</div>
     

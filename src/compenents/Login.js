@@ -8,16 +8,21 @@ const Login = () => {
 const dispatch=useDispatch()
 const {error}=useSelector(state=>state.user)
   return (
-    <div>
-      <input type='email' placeholder='type your email' ref={email}></input>
-      <input type='password' placeholder='type your password'ref={password}></input>
-      <button onClick={()=>dispatch(UserLogin({
-        email:email.current.value,
-        password:password.current.value
-         }))}>login</button>
-      {error&& <h1>{error}</h1>}
+    <div className='container' style={{width:'100%'}}>
+		<div className='inputs'>
+			<div>EMAIL</div>
+			 <input type='email'  ref={email}></input>
+			 <div>PASSWORD</div>
 
-    </div>
+   <input type='password' ref={password}></input>
+     <button onClick={()=>dispatch(UserLogin({
+       email:email.current.value,
+       password:password.current.value
+        }))}>LOGIN</button>
+     {error&& <h5>{error}</h5>}
+		</div>
+    
+   </div>
   )
 }
 

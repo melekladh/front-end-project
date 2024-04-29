@@ -14,7 +14,9 @@
   gap:10px;
   color:'blue';
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  /* border: none; */
+ 
+}
+.inputs input{
 border-top: none;
 border-right: none;
 border-left: none;

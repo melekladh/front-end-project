@@ -21,7 +21,7 @@ const {error}=useSelector(state=>state.user)
        email:email.current.value,
        password:password.current.value
         }))}>register</button>
-     {error&& <h1>{error}</h1>}
+     {error&& <h5>{error}</h5>}
 		</div>
     
    </div>

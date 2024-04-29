@@ -37,14 +37,13 @@ const Navigation = () => {
     <Nav className="me-auto">
       {
         isAuth? <>
-        <Link to='/profile'>profile</Link>
-      {/* <Nav.Link  onClick={()=> dispatch(logout()) }>logout</Nav.Link> */}
+        <Link to='/profile' style={{textDecoration:'none'}}>profile</Link>
      <button onClick={()=> dispatch(logout()) }>
       LogOut
      </button>
-        </>:<div style={{display:'flex', justifyContent:'flex-end'}}>
+        </>:<div   style={{display:'flex', justifyContent:'flex-end',width:'100%'}}>
 
-        <Link to='/login' style={{textDecoration:'none'}}>login</Link>
+        <Link to='/login' style={{textDecoration:'none', marginRight: '10px'}}>login</Link>
          <Link to='/register' style={{textDecoration:'none'}}>register</Link>
              </div>
 

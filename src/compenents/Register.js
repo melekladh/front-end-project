@@ -12,8 +12,11 @@ const {error}=useSelector(state=>state.user)
 
      <div className='container' style={{width:'100%'}}>
 		<div className='inputs'>
-			 <input type='email' placeholder='type your email' ref={email}></input>
-   <input type='password' placeholder='type your password'ref={password}></input>
+			<div>EMAIL</div>
+			 <input type='email'  ref={email}></input>
+			 <div>PASSWORD</div>
+
+   <input type='password' ref={password}></input>
      <button onClick={()=>dispatch(UserRegister({
        email:email.current.value,
        password:password.current.value

@@ -14,12 +14,14 @@
   gap:10px;
   color:'blue';
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: none;
 }
 .inputs button{
 background-color: aliceblue;
 border:2px solid blue;
 padding:5px;
 cursor:pointer;
+color:azure
 
 }
 .button:hover {

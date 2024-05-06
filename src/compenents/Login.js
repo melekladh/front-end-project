@@ -71,14 +71,19 @@ export default function Login() {
             </div>
 
             <div>
-              <button  type="submit" onClick={() => dispatch(UserLogin({ // Dispatching UserRegister action with email and password
-          email: email.current.value, // Getting email value from ref
-          password: password.current.value // Getting password value from ref
-        }))}
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Sign in
-              </button>
+            <button
+  type="submit"
+  onClick={(e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    dispatch(UserLogin({ // Dispatching UserRegister action with email and password
+      email: email.current.value, // Getting email value from ref
+      password: password.current.value // Getting password value from ref
+    }));
+  }}
+  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+>
+  Sign in
+</button>
               {error && <h5>{error}</h5>}
             </div>
           </form>

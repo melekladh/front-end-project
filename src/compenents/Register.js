@@ -55,7 +55,7 @@ export default function Register() {
             alt="Your Company"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign in to your account
+            Sign up to your account
           </h2>
         </div>
 
@@ -101,14 +101,19 @@ export default function Register() {
             </div>
 
             <div>
-              <button  type="submit" onClick={() => dispatch(UserRegister({ // Dispatching UserRegister action with email and password
-          email: email.current.value, // Getting email value from ref
-          password: password.current.value // Getting password value from ref
-        }))}
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Sign in
-              </button>
+            <button
+  type="submit"
+  onClick={(e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    dispatch(UserRegister({ // Dispatching UserRegister action with email and password
+      email: email.current.value, // Getting email value from ref
+      password: password.current.value // Getting password value from ref
+    }));
+  }}
+  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+>
+  Sign up
+</button>
               {error && <h5>{error}</h5>}
             </div>
           </form>

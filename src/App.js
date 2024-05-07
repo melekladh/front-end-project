@@ -6,6 +6,7 @@ import Profile from './compenents/Profile';
 import Product from './compenents/Product';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './compenents/Navigation';
+import ProductsDetails from './compenents/ProductDetails';
 
 
 function App() {

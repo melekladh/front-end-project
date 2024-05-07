@@ -17,7 +17,7 @@ const Navigation = () => {
     // Navbar component for navigation, using Bootstrap styles
     <Navbar expand="lg" className="bg-body-tertiary" style={{ position: 'sticky', zIndex: 1000, top: '0px' }}>
       <Container>
-        <Navbar.Brand href="#home">Ecomern</Navbar.Brand> {/* Navbar brand */}
+        <Link to='/' style={{textDecoration:"none"}}>Ecomern</Link> {/* Navbar brand */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" /> {/* Toggle button for responsive behavior */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

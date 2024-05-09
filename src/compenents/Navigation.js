@@ -15,7 +15,7 @@ const Navigation = () => {
 
   return (
     // Navbar component for navigation, using Bootstrap styles
-    <Navbar expand="lg" className="bg-body-tertiary" style={{ position: 'sticky', zIndex: 1000, top: '0px' }}>
+    <Navbar expand="lg" className="bg-body-tertiary" style={{ position: 'absolute', zIndex: 1000, top: '0px', display:"flex",justifyContent:"space-around" }}>
       <Container>
         <Link to='/' style={{textDecoration:"none"}}>Ecomern</Link> {/* Navbar brand */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" /> {/* Toggle button for responsive behavior */}
@@ -28,14 +28,16 @@ const Navigation = () => {
                 <>
                   <Link to='/profile' style={{ textDecoration: 'none' }}>profile</Link> {/* Profile link */}
                   <button onClick={() => dispatch(logout())}> {/* Logout button */}
-                    LogOut
+                    Log out
                   </button>
                 </>
               ) : (
                 // If user is not authenticated, render login and register links
-                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <div >
                   <Link to='/login' style={{ textDecoration: 'none' }}>login</Link> {/* Login link */}
                   <Link to='/register' style={{ textDecoration: 'none' }}>register</Link> {/* Register link */}
+                  <Link to='/cart' style={{ textDecoration: 'none' }}>cart</Link> {/* Cart link */}
+
                 </div>
               )
             }

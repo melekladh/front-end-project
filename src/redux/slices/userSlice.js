@@ -4,7 +4,7 @@ import axios from 'axios'; // Importing axios for making HTTP requests
 // Async thunk action for user login
 export const UserLogin = createAsyncThunk('/login', async (data, { rejectWithValue }) => {
     try {
-        const res = await axios.post('https://back-end-project-rlx0.onrender.com/api/login', data);
+        const res = await axios.post('http://localhost:9000/api/login', data);
         return res.data; // Returning response data
     } catch (error) {
         return rejectWithValue(error.response.data.msg); // Returning error message if request fails
@@ -14,7 +14,7 @@ export const UserLogin = createAsyncThunk('/login', async (data, { rejectWithVal
 // Async thunk action for user registration
 export const UserRegister = createAsyncThunk('/register', async (data, { rejectWithValue }) => {
     try {
-        const res = await axios.post('https://back-end-project-rlx0.onrender.com/api/register', data);
+        const res = await axios.post('http://localhost:9000/api/register', data);
         return res.data; // Returning response data
     } catch (error) {
         return rejectWithValue(error.response.data.msg); // Returning error message if request fails

@@ -4,13 +4,15 @@ import axios from "axios"; // Importing axios for making HTTP requests
 // Async thunk action for creating a product
 export const createProduct = createAsyncThunk('/product/createproduct', async (data, { rejectWithValue }) => {
     try {
-        const res = await axios.post('https://back-end-project-rlx0.onrender.com/api/product/addproduct', data, {
+        const res = await axios.post('http://localhost:9000/api/product/addproduct', data, {
             headers: {
                 token: localStorage.getItem("token") // Setting token header
             }
         });
         return res.data; // Returning response data
     } catch (error) {
+                console.log(error)
+
         return rejectWithValue(error.response.data.msg); // Returning error message if request fails
     }
 });
@@ -18,7 +20,7 @@ export const createProduct = createAsyncThunk('/product/createproduct', async (d
 // Async thunk action for fetching products
 export const getProduct = createAsyncThunk('/product/getproduct', async (data, { rejectWithValue }) => {
     try {
-        const res = await axios.get('https://back-end-project-rlx0.onrender.com/api/product/getproduct', {
+        const res = await axios.get('http://localhost:9000/api/product/getproduct', {
             headers: {
                 token: localStorage.getItem('token') // Setting token header
             }

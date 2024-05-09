@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'; // Importing React, useEffect hooks from react
-import Button from 'react-bootstrap/Button'; // Importing Button component from react-bootstrap
-import Card from 'react-bootstrap/Card'; // Importing Card component from react-bootstrap
+
 import { useDispatch, useSelector } from 'react-redux'; // Importing necessary hooks from react-redux for interacting with Redux store
 import { getProduct } from '../redux/slices/productSlice'; // Importing getProduct action from productSlice
 import { Link } from 'react-router-dom';
@@ -17,21 +16,37 @@ const Product = () => {
   return (
     // Displaying product cards in a flexbox layout
 
-    <div className="product-page" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
-  {/* Mapping through productData and rendering product cards */}
-  {productData.map(product => (
-    <Link to={`/products/${product.title}`}>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={product.image} /> {/* Product image */}
-        <Card.Body>
-          <Card.Title>{product.title}</Card.Title> {/* Product title */}
-          <Card.Text>{product.price}</Card.Text> {/* Product price */}
-          <Button variant="primary">Add to cart</Button> {/* Button to add product to cart */}
-        </Card.Body>
-      </Card>
-    </Link>
-  ))}
-</div>
+    <div className="bg-white">
+      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          {productData.map((product) => (
+            <div key={product.id} className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img
+                  src={product.image}
+                  alt={product.imageAlt}
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href={product.href}>
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      {product.title}
+                    </a>
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">{product.price}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
 
 
   );
